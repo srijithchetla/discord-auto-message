@@ -11,10 +11,10 @@ if len(sys.argv) > 1 and sys.argv[1] == "--setall" and input("Configure bot? (y/
     file.close()
     file = open("info.txt", "w")
     text = []
-    text.append(input("User agent: "))
-    text.append(input("Discord token: "))
-    text.append(input("Discord channel URL: "))
-    text.append(input("Discord channel ID: "))
+    text.append(input("User agent: https://explore.whatismybrowser.com/useragents/parse/121492838-discord-bot"))
+    text.append(input("Discord token: Njk3MTU0Mjc3NDQ0OTQzOTc5"))
+    text.append(input("Discord channel URL: https://discord.com/channels/1095662705018413066/1095662929816326265"))
+    text.append(input("Discord channel ID: 1095662929816326265"))
 
     for parameter in text:
         file.write(parameter + "\n")
@@ -27,8 +27,8 @@ elif len(sys.argv) > 1 and sys.argv[1] == "--setchannel" and input("Set channel?
     text = text[0:2]
     file.close()
     file = open("info.txt", "w")
-    text.append(input("Discord channel URL: "))
-    text.append(input("Discord channel ID: "))
+    text.append(input("Discord channel URL: https://discord.com/channels/1095662705018413066/1095662929816326265"))
+    text.append(input("Discord channel ID: 1095662929816326265"))
     for parameter in text:
         file.write(parameter + "\n")
 
@@ -40,8 +40,8 @@ elif len(sys.argv) > 1 and sys.argv[1] == "--setauth" and input("Set authenticat
     text = text[2:4]
     file.close()
     file = open("info.txt", "w")
-    text.insert(0, input("Discord token: "))
-    text.insert(0, input("User agent: "))
+    text.insert(0, input("Discord token: 1095662929816326265"))
+    text.insert(0, input("User agent: https://explore.whatismybrowser.com/useragents/parse/121492838-discord-bot"))
     for parameter in text:
         file.write(parameter + "\n")
 
@@ -109,9 +109,9 @@ def main(msg):
 if __name__ == '__main__':
     print("Message to send- when finished, type an EOF character:")
     message = sys.stdin.read()
-    messages = int(input("Amount of messages: "))
-    main_wait = int(input("Seconds between messages: "))
-    human_margin = int(input("Human error margin: "))
+    messages = int(input("Amount of messages: 1000"))
+    main_wait = int(input("Seconds between messages: 21600"))
+    human_margin = int(input("Human error margin: 12"))
     print()
     for i in range(0,messages):
         main(message)
